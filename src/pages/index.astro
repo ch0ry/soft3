@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import {Image} from "astro:assets";
+---
+
+<Layout title="Blue">
+  <h1>This is a blue deployment</h1>
+  <div class="infoTable">
+  <Card title="Green/Blue Deployments"
+    body="This architecture consists of two identical environments one refers to production and another one for testing updates it allows for rolling updates with virtually zero downtime and quickly rollback if needed just by redirecting the traffic to one or the other environment">
+  <Image src="/images/gbdply.png" alt="Green/Blue Deployment diagram" width={400} height={200}>
+
+  </div>
+</Layout>
+
+<style>
+.infoTable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+</style>
+
